@@ -1,0 +1,11 @@
+﻿{
+  "name": "elaris-landing",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "build:site": "node scripts/build-site.mjs",
+    "check": "node scripts/check-site.mjs",
+    "preview": "node scripts/preview-site.mjs",
+    "verify": "node scripts/build-site.mjs && node scripts/check-site.mjs"
+  }
+}

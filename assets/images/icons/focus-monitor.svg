@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Focus Monitor">
+  <g stroke="#EEF3FC" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="6"/>
+    <circle cx="32" cy="32" r="14"/>
+    <circle cx="32" cy="32" r="22" opacity="0.52"/>
+    <path d="M32 10V16"/>
+    <path d="M32 48V54"/>
+    <path d="M10 32H16"/>
+    <path d="M48 32H54"/>
+  </g>
+  <circle cx="32" cy="32" r="2.4" fill="#F7FAFF"/>
+</svg>

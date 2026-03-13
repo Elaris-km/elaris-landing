@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Situation">
+  <g stroke="#EEF3FC" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="12" y="16" width="40" height="32" rx="8"/>
+    <path d="M20 27H36"/>
+    <path d="M20 34H44" opacity="0.82"/>
+    <path d="M20 41H31" opacity="0.62"/>
+  </g>
+  <circle cx="43" cy="27" r="3" fill="#F7FAFF"/>
+</svg>

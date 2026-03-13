@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Event Pulse">
+  <g stroke="#EEF3FC" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 32H24"/>
+    <path d="M40 32H54"/>
+    <path d="M24 32L28 32L32 24L36 40L40 32"/>
+    <path d="M32 19V14" opacity="0.85"/>
+    <path d="M45 32H50" opacity="0.85"/>
+    <path d="M14 32H19" opacity="0.85"/>
+  </g>
+  <circle cx="32" cy="32" r="6.4" opacity="0.28" stroke="#EEF3FC" stroke-width="2.8"/>
+</svg>

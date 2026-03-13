@@ -1,0 +1,11 @@
+.DS_Store
+._*
+.playwright-cli/
+.vercel/
+
+backups/
+dist/
+output/
+test-results/
+
+*.log

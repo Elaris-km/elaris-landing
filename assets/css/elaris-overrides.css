@@ -1,0 +1,1331 @@
+﻿/* Elaris customizations: layered on top of the purchased template so we can iterate block-by-block. */
+.tf-header {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+.tf-header.header2 .header-inner {
+  max-width: 1048px;
+  padding-left: 24px;
+  background: rgba(246, 247, 250, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  box-shadow: 0 18px 48px rgba(5, 8, 18, 0.22);
+  font-family: "Roboto", sans-serif;
+}
+
+.tf-header .logo-site img {
+  display: block;
+  width: 142px;
+  height: auto;
+  filter: brightness(0) saturate(100%);
+}
+
+.tf-header .item-link {
+  color: #111827;
+}
+
+.tf-header .item-link::before {
+  background-color: #111827;
+}
+
+.tf-left-bar {
+  display: none !important;
+}
+
+.section-hero.elaris-hero .hero-image {
+  --hero-media-overflow: 320px;
+  overflow: hidden;
+  background-color: #060816;
+}
+
+.section-hero.elaris-hero .hero-image video,
+.section-hero.elaris-hero .hero-image img {
+  position: absolute;
+  top: calc(var(--hero-media-overflow) * -0.5);
+  left: 0;
+  width: 100%;
+  height: calc(100% + var(--hero-media-overflow));
+  object-fit: cover;
+  object-position: center center;
+  will-change: transform;
+  background-color: #060816;
+}
+
+.section-hero.elaris-hero .hero-image video {
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.section-hero.elaris-hero .hero-image.is-ready video {
+  opacity: 1;
+}
+
+.section-hero.elaris-hero .hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background:
+    radial-gradient(circle at 50% 34%, rgba(7, 10, 20, 0.12) 0%, rgba(7, 10, 20, 0.44) 42%, rgba(7, 10, 20, 0.72) 100%),
+    linear-gradient(180deg, rgba(6, 8, 16, 0.1), rgba(6, 8, 16, 0.38));
+  pointer-events: none;
+}
+
+.section-hero.elaris-hero .content-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-hero.elaris-hero .elaris-hero-title {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.section-hero.elaris-hero .elaris-hero-title .title1,
+.section-hero.elaris-hero .elaris-hero-title .title2 > span {
+  letter-spacing: -0.05em;
+  color: #f7f9fd;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  text-shadow: 0 12px 40px rgba(5, 8, 18, 0.48);
+}
+
+.section-hero.elaris-hero .elaris-hero-title .title2 {
+  margin-top: 10px;
+}
+
+.section-hero.elaris-hero .elaris-hero-copy {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 96px;
+  min-height: 108px;
+  font-size: 24px;
+  line-height: 1.52;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: rgba(241, 245, 249, 0.9);
+  text-shadow: 0 10px 28px rgba(5, 8, 18, 0.44);
+}
+
+.section-hero.elaris-hero .elaris-hero-copy-typing {
+  position: relative;
+}
+
+.section-hero.elaris-hero .elaris-typed-text {
+  display: inline;
+}
+
+.section-hero.elaris-hero .elaris-typing-cursor {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.78em;
+  margin-left: 0.08em;
+  vertical-align: -0.06em;
+  border-radius: 2px;
+  background: rgba(247, 249, 253, 0.95);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.22);
+  animation: elarisCursorBlink 1s steps(1, end) infinite;
+}
+
+.elaris-cta:hover {
+  color: #ffffff;
+  background: radial-gradient(62.56% 62.56% at 50% -13%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #c11717 0%, #ff3b26 100%);
+  box-shadow: 0px -3px 0px 0px rgba(123, 10, 10, 0.92) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.28) inset, 0px 8px 20px rgba(255, 59, 38, 0.34), 0px 22px 46px rgba(255, 59, 38, 0.24);
+}
+
+.section-hero.elaris-hero .bot-btns {
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.section-hero.elaris-hero .elaris-secondary-cta {
+  min-width: 148px;
+  color: #10141f;
+  background: radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #f5f5f5, #f5f5f5);
+  box-shadow: 0px -3px 0px 0px #e7e7e7 inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.72) inset, 0px 6px 18px rgba(5, 8, 18, 0.2);
+}
+
+.section-hero.elaris-hero .elaris-secondary-cta:hover {
+  color: #ff3b26;
+  background: radial-gradient(62.56% 62.56% at 50% -13%, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #fafafa, #fafafa);
+  box-shadow: 0px -3px 0px 0px #ebebeb inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.82) inset, 0px 10px 22px rgba(5, 8, 18, 0.22);
+}
+
+.section-hero.elaris-hero .scroll-more {
+  width: 360px;
+}
+
+.offcanvas-content_wrapin .canvas_head .logo-site img {
+  width: 142px;
+  height: auto;
+}
+
+.elaris-section-anchor {
+  position: relative;
+  top: -132px;
+  height: 0;
+  pointer-events: none;
+}
+
+.elaris-soft-reveal {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  filter: blur(2px);
+  will-change: transform, opacity, filter;
+  transition:
+    opacity 1260ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1260ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.elaris-soft-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+}
+
+.elaris-soft-reveal-showcase {
+  transform: translate3d(0, 12px, 0) scale(0.998);
+}
+
+.elaris-soft-reveal-showcase.is-visible {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.section-about-us.elaris-about-overview .heading-section {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-about-us.elaris-about-overview .heading-title {
+  max-width: 980px;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, #292c2e 0%, #292c2e 68%, rgba(41, 44, 46, 0.46) 88%, rgba(41, 44, 46, 0.18) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-about-us.elaris-about-overview .elaris-about-showcase {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  margin-top: -18px;
+  padding: 18px;
+  border-radius: 44px;
+  background: linear-gradient(180deg, rgba(247, 247, 249, 0.98) 0%, rgba(239, 240, 244, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 24px rgba(5, 8, 18, 0.08), 0 34px 80px rgba(5, 8, 18, 0.12), inset 0 4px 0 rgba(255, 255, 255, 0.74), inset 0 -8px 0 rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  appearance: none;
+  text-align: inherit;
+  cursor: zoom-in;
+  transition:
+    opacity 1260ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1260ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1260ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s ease;
+}
+
+.section-about-us.elaris-about-overview .elaris-about-showcase:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(5, 8, 18, 0.1), 0 42px 92px rgba(5, 8, 18, 0.14), inset 0 4px 0 rgba(255, 255, 255, 0.74), inset 0 -8px 0 rgba(0, 0, 0, 0.04);
+}
+
+.section-about-us.elaris-about-overview .elaris-about-showcase:focus-visible {
+  outline: 3px solid rgba(255, 59, 38, 0.38);
+  outline-offset: 4px;
+}
+
+.section-about-us.elaris-about-overview .elaris-about-showcase img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(5, 8, 18, 0.22);
+}
+
+.section-partner .elaris-partner-intro {
+  margin: 0 0 22px;
+  text-align: left;
+  font-size: 26px;
+  line-height: 1.32;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #343945;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-partner .partner-wrap {
+  justify-content: center;
+  align-items: center;
+}
+
+.section-partner .partner-wrap .infiniteSlide_tech_main {
+  min-width: 0;
+  width: 100%;
+}
+
+.section-partner .partner-wrap .infiniteSlide_partner {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  justify-content: center;
+}
+
+.section-partner .partner-wrap .elaris-metric-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  color: #8a93a5;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-partner .partner-wrap .elaris-metric-item::after {
+  content: "·";
+  margin-left: 34px;
+  color: #bcc4d1;
+}
+
+.section-features.elaris-capabilities-section .heading-title {
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: -0.04em;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-features.elaris-capabilities-section .features-item {
+  transition:
+    opacity 1260ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1260ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1260ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-features.elaris-capabilities-section .features-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.08), 0px 6px 6px 0px rgba(0, 0, 0, 0.08), 0px -8px 0px 0px rgba(0, 0, 0, 0.05) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.7) inset;
+}
+
+.section-features.elaris-capabilities-section .elaris-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  margin-bottom: 32px;
+  border-radius: 17px;
+  background:
+    radial-gradient(70% 70% at 30% 18%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, #22262e 0%, #171b23 100%);
+  box-shadow: 0px -3px 0px 0px #090b10 inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.18) inset, 0px 10px 22px rgba(7, 10, 18, 0.24);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+}
+
+.section-features.elaris-capabilities-section .elaris-feature-icon img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  filter: drop-shadow(0 0 8px rgba(237, 242, 255, 0.14));
+}
+
+.section-features.elaris-capabilities-section .features-item:hover .elaris-feature-icon {
+  transform: translateY(-2px);
+  background:
+    radial-gradient(70% 70% at 30% 18%, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, #262b34 0%, #1a1f28 100%);
+  box-shadow: 0px -3px 0px 0px #090b10 inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.24) inset, 0px 12px 28px rgba(7, 10, 18, 0.28), 0px 0px 24px rgba(232, 238, 248, 0.12);
+}
+
+.section-features.elaris-capabilities-section .features-item:hover .elaris-feature-icon img {
+  filter: drop-shadow(0 0 12px rgba(245, 248, 255, 0.28));
+}
+
+.section-features.elaris-capabilities-section .features-item .title {
+  margin-bottom: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-features.elaris-capabilities-section .features-item p {
+  color: #616977;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-services.elaris-interface-section .heading-section,
+.section-services.elaris-interface-section .accordion-faq_item,
+.section-services.elaris-interface-section .services-image,
+.section-services.elaris-interface-section .list-tags a,
+.section-services.elaris-interface-section .accordion-content .text {
+  font-family: "Roboto", sans-serif;
+}
+
+.section-services.elaris-interface-section .heading-title {
+  max-width: 560px;
+  font-size: clamp(42px, 3.9vw, 58px);
+  line-height: clamp(46px, 4.2vw, 60px);
+  text-wrap: balance;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.section-services.elaris-interface-section .elaris-interface-copy {
+  max-width: 500px;
+  color: #434956;
+  font-size: 18px;
+  line-height: 1.62;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+.section-services.elaris-interface-section .col-left {
+  margin-bottom: 320px;
+}
+
+.section-services.elaris-interface-section .accordion-title {
+  gap: 24px;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.section-services.elaris-interface-section .accordion-action:not(.collapsed) .accordion-title {
+  font-size: clamp(36px, 3.2vw, 48px);
+  line-height: clamp(42px, 3.8vw, 56px);
+}
+
+.section-services.elaris-interface-section .accordion-title br {
+  display: none !important;
+}
+
+.section-services.elaris-interface-section .accordion-content .text {
+  font-size: 21px;
+  line-height: 1.62;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+}
+
+.section-services.elaris-interface-section .services-image {
+  display: block;
+}
+
+.section-services.elaris-interface-section .list-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section-services.elaris-interface-section .list-tags .tags-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 15px;
+  border-radius: 99px;
+  color: var(--neutral-300);
+  background: var(--neutral-700);
+  border: 1px solid var(--neutral-600);
+  transition: color 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+  cursor: default;
+}
+
+.section-services.elaris-interface-section .list-tags .tags-item:hover {
+  color: var(--brand);
+  border-color: rgba(255, 59, 38, 0.32);
+  box-shadow: 0 0 0 1px rgba(255, 59, 38, 0.08), 0 8px 18px rgba(255, 59, 38, 0.08);
+  transform: translateY(-1px);
+}
+
+.section-tools.elaris-tools-section {
+  font-family: "Roboto", sans-serif;
+}
+
+.section-tools.elaris-tools-section .heading-section {
+  margin-bottom: 36px;
+}
+
+.section-tools.elaris-tools-section .heading-title {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-tools.elaris-tools-section .elaris-tools-title {
+  color: #2f343b;
+  background: none;
+  -webkit-text-fill-color: initial;
+  -webkit-background-clip: initial;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.94;
+  width: 100%;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-tools.elaris-tools-section .elaris-tools-title-line {
+  display: block;
+  text-align: center;
+}
+
+.section-tools.elaris-tools-section .elaris-tools-copy {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #454b57;
+  font-size: 22px;
+  line-height: 1.58;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+}
+
+.section-tools.elaris-tools-section > img {
+  box-shadow: 14px 28px 42px rgba(10, 14, 24, 0.12);
+}
+
+.section-statistic.elaris-data-section .heading-title {
+  max-width: 500px;
+  font-size: clamp(34px, 3.7vw, 62px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.section-statistic.elaris-data-section .statistic-slider .text {
+  max-width: 520px;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-statistic.elaris-data-section .swiper .title {
+  margin-bottom: 16px;
+}
+
+.section-statistic.elaris-data-section .elaris-stat-note {
+  margin-top: 6px;
+  max-width: 360px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.section-pricing.elaris-pricing-section {
+  font-family: "Roboto", sans-serif;
+}
+
+.section-pricing.elaris-pricing-section .heading-section {
+  max-width: 1180px;
+}
+
+.section-pricing.elaris-pricing-section .elaris-pricing-title {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(40px, 5vw, 84px);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  color: #30353d;
+  max-width: 1020px;
+  text-wrap: balance;
+}
+
+.section-pricing.elaris-pricing-section .elaris-pricing-note-wrap {
+  margin-top: 32px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 18px 26px;
+}
+
+.section-pricing.elaris-pricing-section .elaris-pricing-toggle-stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.section-pricing.elaris-pricing-section .elaris-pricing-toggle {
+  margin: 0;
+}
+
+.section-pricing.elaris-pricing-section .elaris-pricing-mode-caption {
+  min-height: 16px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  color: #8a919d;
+  letter-spacing: -0.01em;
+}
+
+.section-pricing.elaris-pricing-section .elaris-pricing-note {
+  max-width: 700px;
+  color: #5d6470;
+  font-size: 16px;
+  line-height: 1.55;
+  text-wrap: pretty;
+  padding-top: 2px;
+}
+
+.section-pricing.elaris-pricing-section .row.g-24 {
+  --bs-gutter-x: 24px;
+  --bs-gutter-y: 24px;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 34px 34px 36px;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-card .top {
+  display: block;
+  margin-bottom: 24px;
+  min-height: 162px;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-name {
+  font-size: clamp(46px, 3.7vw, 70px);
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  color: #18181b;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-subtitle {
+  margin-top: 12px;
+  max-width: 280px;
+  color: #6b7280;
+  font-size: 20px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  min-height: 52px;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-standard .elaris-plan-name,
+.section-pricing.elaris-pricing-section .elaris-plan-pro .elaris-plan-name {
+  color: #ffffff;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-standard .elaris-plan-subtitle,
+.section-pricing.elaris-pricing-section .elaris-plan-pro .elaris-plan-subtitle {
+  color: #c3cad6;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-heading {
+  display: flex;
+  align-items: flex-end;
+  min-height: 138px;
+  margin-bottom: 0;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-price-display,
+.section-pricing.elaris-pricing-section .elaris-plan-pricing {
+  width: 100%;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-price-text {
+  font-size: clamp(50px, 3.4vw, 74px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+  color: #18181b;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-pricing .elaris-price-number {
+  font-size: clamp(58px, 4.1vw, 86px);
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-free .elaris-plan-pricing .elaris-price-number {
+  color: #18181b;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-standard .elaris-plan-pricing .elaris-price-number,
+.section-pricing.elaris-pricing-section .elaris-plan-pro .elaris-plan-pricing .elaris-price-number {
+  color: #ffffff;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-pricing .price-per {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: inherit;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-standard .elaris-plan-pricing .price-per,
+.section-pricing.elaris-pricing-section .elaris-plan-pro .elaris-plan-pricing .price-per {
+  color: #c3cad6;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-pricing[data-pricing-mode="economy"] {
+  display: grid;
+  gap: 14px;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-pricing[hidden] {
+  display: none !important;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-card .content {
+  display: block;
+  padding-top: 22px;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-card .content > * {
+  width: 100%;
+  max-width: none;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-saving-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 10px;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-saving-price {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  color: #18181b;
+  letter-spacing: -0.03em;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-saving-period {
+  color: #6b7280;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-standard .elaris-plan-saving-price,
+.section-pricing.elaris-pricing-section .elaris-plan-pro .elaris-plan-saving-price {
+  color: #ffffff;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-standard .elaris-plan-saving-period,
+.section-pricing.elaris-pricing-section .elaris-plan-pro .elaris-plan-saving-period {
+  color: #c3cad6;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-discount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 26px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 59, 38, 0.12);
+  color: #ff6c59;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-card .list-text.type-check {
+  gap: 12px;
+  padding-left: 0;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-card .list-text.type-check li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #30353d;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-card .list-text.type-check li i {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  margin-top: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 11px;
+  color: #707784;
+  background: rgba(31, 41, 55, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-standard .list-text.type-check li,
+.section-pricing.elaris-pricing-section .elaris-plan-pro .list-text.type-check li {
+  color: #f4f6f9;
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-standard .list-text.type-check li i,
+.section-pricing.elaris-pricing-section .elaris-plan-pro .list-text.type-check li i {
+  color: #e8edf5;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.section-pricing.elaris-pricing-section .elaris-plan-pro {
+  border: 1px solid rgba(255, 91, 67, 0.42);
+  box-shadow: 0px -8px 0px 0px #2e2e2e inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.302) inset, 0px 7.77px 2.21px 0px rgba(0, 0, 0, 0.059), 0px 3px 3px 0px rgba(0, 0, 0, 0.102), 0px 22px 60px 0px rgba(255, 59, 38, 0.14);
+}
+
+.section-pricing.elaris-pricing-section .elaris-pricing-footnote {
+  margin-top: 28px;
+  text-align: center;
+  color: #5d6470;
+}
+
+@media (max-width: 1199px) {
+  .section-pricing.elaris-pricing-section .elaris-plan-name {
+    font-size: clamp(40px, 5.2vw, 58px);
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-heading {
+    min-height: 112px;
+  }
+}
+
+@media (max-width: 991px) {
+  .section-pricing.elaris-pricing-section .elaris-pricing-note-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-pricing-title {
+    font-size: clamp(34px, 7vw, 56px);
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-card {
+    padding: 28px 24px 30px;
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-card .top {
+    min-height: 144px;
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-subtitle {
+    max-width: none;
+    font-size: 18px;
+    min-height: 46px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-pricing.elaris-pricing-section .elaris-pricing-toggle-stack {
+    gap: 8px;
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-pricing-toggle {
+    width: 80px;
+    height: 40px;
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-card {
+    padding-bottom: 30px;
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-card .top {
+    min-height: auto;
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-name {
+    font-size: clamp(38px, 12vw, 50px);
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-subtitle {
+    max-width: none;
+    font-size: 16px;
+    min-height: auto;
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-heading {
+    min-height: auto;
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-pricing .elaris-price-number,
+  .section-pricing.elaris-pricing-section .elaris-plan-price-text {
+    font-size: clamp(46px, 14vw, 64px);
+  }
+
+  .section-pricing.elaris-pricing-section .elaris-plan-saving-price {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 991px) {
+  .section-statistic.elaris-data-section .heading-title {
+    max-width: 100%;
+    font-size: clamp(32px, 6.8vw, 54px);
+  }
+}
+
+.section-contact.elaris-access-section {
+  padding: 48px;
+}
+
+.section-contact.elaris-access-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.elaris-access-shell {
+  position: relative;
+  padding: 28px 0;
+}
+
+.elaris-access-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 84% 22%, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0) 28%);
+  border-radius: 26px;
+  pointer-events: none;
+}
+
+.elaris-access-intro {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-contact.elaris-access-section .heading-section {
+  margin-bottom: 28px;
+}
+
+.elaris-access-title {
+  max-width: 480px;
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.elaris-access-copy {
+  max-width: 470px;
+  color: rgba(243, 247, 252, 0.9);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: -0.012em;
+}
+
+.elaris-access-note {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  max-width: 500px;
+  padding: 22px 24px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(14, 22, 34, 0.18);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.elaris-access-note-title {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.elaris-access-note p {
+  margin: 0;
+  color: rgba(231, 237, 245, 0.9);
+  line-height: 1.62;
+}
+
+.elaris-access-steps {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  height: 100%;
+}
+
+.elaris-access-step {
+  min-height: 214px;
+  padding: 26px 24px 24px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(7, 12, 20, 0.28);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 14px 34px rgba(7, 12, 20, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.elaris-access-step-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 46px;
+  padding: 0 14px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.elaris-access-step-title {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.elaris-access-step p {
+  margin: 0;
+  color: rgba(228, 235, 244, 0.9);
+  line-height: 1.62;
+}
+
+footer .footer-image {
+  top: -34px;
+}
+
+footer .footer-content.elaris-footer-content {
+  min-height: 230px;
+  padding-bottom: 140px;
+  text-align: center;
+}
+
+footer .footer-bottom.elaris-footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+footer .footer-bottom.elaris-footer-bottom > * {
+  width: auto;
+}
+
+footer .footer-bottom.elaris-footer-bottom .coppy-rights {
+  margin: 0;
+  color: #7a818d;
+  font-family: "Roboto", sans-serif;
+}
+
+.offcanvas-menu .canvas_foot.elaris-mobile-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.offcanvas-menu .canvas_foot.elaris-mobile-foot .tf-btn {
+  width: auto;
+}
+
+.elaris-preview-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+}
+
+body.elaris-preview-open {
+  overflow: hidden;
+}
+
+.elaris-preview-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 12, 22, 0.34);
+  backdrop-filter: blur(16px);
+}
+
+.elaris-preview-dialog {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 42px;
+}
+
+.elaris-preview-frame {
+  position: relative;
+  width: min(1680px, calc(100vw - 84px));
+  max-height: calc(100vh - 84px);
+  padding: 18px;
+  border-radius: 34px;
+  background: linear-gradient(180deg, rgba(247, 247, 249, 0.98) 0%, rgba(239, 240, 244, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 28px 90px rgba(4, 6, 12, 0.34);
+}
+
+.elaris-preview-frame img {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 120px);
+  object-fit: contain;
+  border-radius: 22px;
+}
+
+.elaris-preview-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  color: #f8fafc;
+  background: rgba(13, 18, 31, 0.72);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 32px rgba(4, 6, 12, 0.24);
+  transition: background 0.24s ease, transform 0.24s ease, color 0.24s ease;
+}
+
+.elaris-preview-close:hover {
+  color: #ffffff;
+  background: rgba(255, 59, 38, 0.84);
+  transform: scale(1.04);
+}
+
+.elaris-preview-close span {
+  font-size: 28px;
+  line-height: 1;
+}
+
+@keyframes elarisCursorBlink {
+  0%,
+  46% {
+    opacity: 1;
+  }
+
+  47%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .tf-header {
+    top: 18px;
+  }
+
+  .tf-header.header2 .header-inner {
+    max-width: unset;
+  }
+
+  .section-hero.elaris-hero .content-wrap {
+    max-width: 840px;
+  }
+
+  .section-about-us.elaris-about-overview .heading-section {
+    margin-bottom: 32px;
+  }
+
+  .section-about-us.elaris-about-overview .elaris-about-showcase {
+    margin-top: -10px;
+  }
+
+  .elaris-access-shell {
+    padding: 20px 0;
+  }
+
+  .elaris-access-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .elaris-access-step {
+    min-height: auto;
+  }
+
+  footer .footer-bottom.elaris-footer-bottom {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .tf-header .header-inner {
+    margin: 0 16px;
+    padding-left: 20px;
+  }
+
+  .section-partner .elaris-partner-intro {
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .section-services.elaris-interface-section .heading-title {
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .section-services.elaris-interface-section .elaris-interface-copy {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .section-services.elaris-interface-section .col-left {
+    margin-bottom: 24px;
+  }
+
+  .section-services.elaris-interface-section .accordion-content .text {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .section-tools.elaris-tools-section .elaris-tools-copy {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .section-contact.elaris-access-section {
+    padding: 24px 12px;
+  }
+
+  .elaris-access-title {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .elaris-access-copy {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .elaris-access-note {
+    padding: 18px 18px 20px;
+    border-radius: 22px;
+  }
+
+  .elaris-access-step {
+    padding: 22px 18px 20px;
+    border-radius: 22px;
+  }
+
+  .elaris-access-step-title {
+    font-size: 24px;
+    line-height: 1.04;
+  }
+
+  footer .footer-content.elaris-footer-content {
+    min-height: 170px;
+    padding-bottom: 90px;
+  }
+
+  .section-hero.elaris-hero .hero-image {
+    --hero-media-overflow: 200px;
+  }
+
+  .section-hero.elaris-hero .elaris-hero-title {
+    margin-bottom: 20px;
+  }
+
+  .section-hero.elaris-hero .elaris-hero-copy {
+    max-width: 100%;
+    min-height: 82px;
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 68px;
+  }
+
+  .section-hero.elaris-hero .scroll-more {
+    width: min(320px, calc(100% - 24px));
+  }
+
+  .section-about-us.elaris-about-overview .heading-title {
+    max-width: 100%;
+  }
+
+  .section-about-us.elaris-about-overview .elaris-about-showcase {
+    padding: 12px;
+    margin-top: 0;
+    border-radius: 28px;
+  }
+
+  .section-about-us.elaris-about-overview .elaris-about-showcase img {
+    border-radius: 18px;
+  }
+
+  .section-partner .partner-wrap .elaris-metric-item {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .section-partner .partner-wrap .elaris-metric-item::after {
+    margin-left: 22px;
+  }
+
+  .section-features.elaris-capabilities-section .elaris-feature-icon {
+    margin-bottom: 24px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .section-features.elaris-capabilities-section .elaris-feature-icon img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .elaris-preview-dialog {
+    padding: 18px;
+  }
+
+  .elaris-preview-frame {
+    width: calc(100vw - 36px);
+    max-height: calc(100vh - 36px);
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  .elaris-preview-frame img {
+    max-height: calc(100vh - 72px);
+    border-radius: 14px;
+  }
+
+  .elaris-preview-close {
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-hero.elaris-hero .elaris-typing-cursor {
+    animation: none;
+  }
+}

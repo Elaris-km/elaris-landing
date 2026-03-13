@@ -1,0 +1,46 @@
+﻿<svg width="156" height="30" viewBox="0 0 603 116" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="elarisLogoTitle elarisLogoDesc">
+  <title id="elarisLogoTitle">Elaris</title>
+  <desc id="elarisLogoDesc">Логотип Elaris с анимированным треугольным знаком.</desc>
+  <style>
+    .wordmark { fill: #ffffff; }
+    .tri-node {
+      --base-opacity: 1;
+      fill: #ffffff;
+      opacity: var(--base-opacity);
+      animation: pulse_51 1500ms ease-in infinite;
+      transform-origin: center;
+    }
+    .tri-node-1 { --base-opacity: 1; }
+    .tri-node-2 { --base-opacity: 0.6; animation-delay: -250ms; }
+    .tri-node-3 { --base-opacity: 0.2; }
+    .tri-node-4 { --base-opacity: 0.8; animation-delay: -1250ms; }
+    .tri-node-5 { --base-opacity: 0.4; animation-delay: -500ms; }
+    .tri-node-6 { --base-opacity: 0.3; animation-delay: -500ms; }
+    .tri-node-7 { --base-opacity: 0.7; animation-delay: -750ms; }
+    .tri-node-8 { --base-opacity: 0.2; animation-delay: -1000ms; }
+    .tri-node-9 { --base-opacity: 0.1; animation-delay: -1000ms; }
+    @keyframes pulse_51 {
+      0% { opacity: var(--base-opacity); }
+      16.666% { opacity: var(--base-opacity); }
+      100% { opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tri-node { animation: none; opacity: var(--base-opacity); }
+    }
+  </style>
+  <path class="wordmark" d="M0 104.101V25H80.9173V38.4722H18.4143V56.1303H44.281V69.6025H18.4143V89.2334H81.6866V104.149H0V104.101Z"/>
+  <path class="wordmark" d="M115.583 104.101V25H133.997V89.1853H193.279V104.101H115.583Z"/>
+  <path class="wordmark" d="M335.593 104.101V25H403.192C409.491 25 414.01 26.2029 416.847 28.6086C419.635 31.0144 421.078 34.9117 421.078 40.3005V58.8729C421.078 64.2136 419.683 68.1109 416.847 70.5648C414.01 73.0187 409.491 74.2215 403.192 74.2215H392.855L429.347 104.101H402.952L371.075 74.2215H353.671V104.101H335.593ZM395.067 38.7127H353.719V60.7013H395.067C398.24 60.7013 400.452 60.2201 401.606 59.3059C402.759 58.3917 403.384 56.7558 403.384 54.3982V44.8715C403.384 42.5619 402.808 40.9741 401.606 40.06C400.452 39.1458 398.24 38.6646 395.067 38.6646V38.7127Z"/>
+  <path class="wordmark" d="M458.387 104.101V25H476.801V104.101H458.387Z"/>
+  <path class="wordmark" d="M585.701 38.8571H533.968V55.8417H583.249C590.99 55.8417 596.182 57.1408 598.923 59.7871C601.663 62.4334 603.009 67.3411 603.009 74.5102V85.3361C603.009 92.5052 601.663 97.4129 598.923 100.059C596.182 102.706 590.99 104.005 583.249 104.005H534.4C526.66 104.005 521.467 102.706 518.727 100.059C515.986 97.4129 514.64 92.5052 514.64 85.3361V79.8029H530.891V89.1372H586.759V71.0941H537.478C529.785 71.0941 524.592 69.795 521.9 67.1487C519.207 64.5023 517.861 59.5946 517.861 52.4255V43.6686C517.861 36.4995 519.207 31.5917 521.9 28.9454C524.592 26.2991 529.785 25 537.478 25H582.335C589.74 25 594.884 26.251 597.721 28.8011C600.557 31.3512 601.952 35.874 601.952 42.3695V47.8065H585.701V38.809V38.8571Z"/>
+  <path class="tri-node tri-node-1" d="M224.062 69.1875L244.035 103.781H204.09L224.062 69.1875Z"/>
+  <path class="tri-node tri-node-2" d="M244.031 34.5938L264.004 69.1875H224.059L244.031 34.5938Z"/>
+  <path class="tri-node tri-node-3" d="M264 0L283.973 34.5937H244.027L264 0Z"/>
+  <path class="tri-node tri-node-4" d="M244.031 103.781L224.059 69.1875L264.004 69.1875L244.031 103.781Z"/>
+  <path class="tri-node tri-node-5" d="M264 69.1875L244.027 34.5938L283.973 34.5938L264 69.1875Z"/>
+  <path class="tri-node tri-node-6" d="M283.969 103.781L263.996 69.1875L303.941 69.1875L283.969 103.781Z"/>
+  <path class="tri-node tri-node-7" d="M264 69.1875L283.973 103.781H244.027L264 69.1875Z"/>
+  <path class="tri-node tri-node-8" d="M283.969 34.5938L303.941 69.1875H263.996L283.969 34.5938Z"/>
+  <path class="tri-node tri-node-9" d="M303.937 69.1875L323.91 103.781H283.965L303.937 69.1875Z"/>
+</svg>
+
